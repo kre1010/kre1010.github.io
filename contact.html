@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mes contact</title>
+</head>
+<body>
+
+    <h1>Mes contacts</h1>
+
+    <input id="nom" placeholder="Nom">
+    <input id="tel" placeholder="Téléphone">
+
+    <button onclick="ajouter()">Ajouter</button>
+
+    <ul id="liste"></ul>
+
+    <script>
+        function ajouter() {
+            let nom = document.getElementById("nom").value;
+            let tel = document.getElementById("tel").value;
+
+            if (nom == "" || tel == "") {
+                alert("Remplis les cases !");
+            } else {
+                let contact = document.createElement("li");
+                contact.textContent = nom + " : " + tel;
+
+                document.getElementById("liste").appendChild(contact);
+
+                document.getElementById("nom").value = "";
+                document.getElementById("tel").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
