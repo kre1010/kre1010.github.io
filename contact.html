@@ -1,37 +1,72 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Mes contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes contacts</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Mes contacts</h1>
+    <div class="container">
 
-    <input id="nom" placeholder="Nom">
-    <input id="tel" placeholder="Téléphone">
+        <header>
+            <h1>📒 Mes contacts</h1>
+            <p>Retrouvez facilement mes informations et contactez-moi !</p>
+        </header>
 
-    <button onclick="ajouter()">Ajouter</button>
+        <section class="carte-contact">
 
-    <ul id="liste"></ul>
+            <div class="avatar">FR</div>
 
-    <script>
-        function ajouter() {
-            let nom = document.getElementById("nom").value;
-            let tel = document.getElementById("tel").value;
+            <h2>FADINI Ryhane</h2>
+            <p class="ville">📍 Aix-en-Provence</p>
 
-            if (nom == "" || tel == "") {
-                alert("Remplis les cases !");
-            } else {
-                let contact = document.createElement("li");
-                contact.textContent = nom + " : " + tel;
+            <p class="description">
+                Bienvenue sur ma page de contact !
+                Vous trouverez ici tous les moyens pour me joindre
+                et découvrir mon parcours.
+            </p>
 
-                document.getElementById("liste").appendChild(contact);
+            <div class="informations">
 
-                document.getElementById("nom").value = "";
-                document.getElementById("tel").value = "";
-            }
-        }
-    </script>
+                <!-- E-mail -->
+                <a href="mailto:ryhanefadini@gmail.com" class="bouton">
+                    ✉️ M'envoyer un e-mail
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/kre1010/kre1010.github.io"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bouton github">
+                    💻 Mon GitHub
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/feed/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="bouton linkedin">
+                    🔗 Mon LinkedIn
+                </a>
+
+                <!-- CV -->
+               <a href="cv-ryhane.pdf"
+                   download="CV_Ryhane_Fadini.pdf"
+                   class="bouton cv">
+                </a>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>© 2026 - FADINI Ryhane | Tous droits réservés</p>
+        </footer>
+
+    </div>
 
 </body>
 </html>
